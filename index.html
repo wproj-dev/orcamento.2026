@@ -219,10 +219,7 @@
     </div> <!-- Fecha .slide-card -->
   </div> <!-- Fecha .presentation-wrapper -->
 
-  <!-- ========================================== -->
-  <!-- INÍCIO DA NOVA PÁGINA (FGTS 2026)          -->
-  <!-- ========================================== -->
-  <div style="page-break-before: always; break-before: page; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8fafc; padding: 20px; color: #1e293b;">
+<div style="page-break-before: always; break-before: page; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8fafc; padding: 20px; color: #1e293b;">
 
     <div style="max-width: 1200px; margin: 0 auto; background: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
 
@@ -233,7 +230,7 @@
 
       <!-- CAMPO 1: VISÃO CONSOLIDADA NACIONAL -->
       <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 24px; margin-bottom: 30px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
           <div>
             <h2 style="font-size: 18px; font-weight: 700; color: #1e293b; margin: 0 0 4px 0;">Execução do Orçamento FGTS 2026</h2>
             <span style="font-size: 12px; color: #64748b;">Visão consolidada nacional · IN nº 47/2026 · Todas as regiões</span>
@@ -251,7 +248,7 @@
         </div>
 
         <!-- Cards de Destaque Superior (Limite, Executado, Saldo) -->
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 16px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 16px;">
           <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 16px; text-align: center;">
             <div style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; margin-bottom: 6px;">Limite 2026 (Col. C)</div>
             <div style="font-size: 22px; font-weight: 800; color: #0f172a;">R$ 6,40 bi</div>
@@ -267,7 +264,7 @@
         </div>
 
         <!-- Totais Menores (Colunas C à M) -->
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; padding-top: 12px; border-top: 1px dashed #e2e8f0; font-size: 12px; color: #475569; text-align: center;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; padding-top: 12px; border-top: 1px dashed #e2e8f0; font-size: 12px; color: #475569; text-align: center;">
           <div style="background: #f8fafc; padding: 8px; border-radius: 6px;"><strong>A Contratar:</strong> R$ 4,185 bi</div>
           <div style="background: #f8fafc; padding: 8px; border-radius: 6px;"><strong>Seleção a Publicar:</strong> R$ 816,04M</div>
           <div style="background: #f8fafc; padding: 8px; border-radius: 6px;"><strong>Demanda Total:</strong> R$ 5,001 bi</div>
@@ -281,7 +278,7 @@
       </div>
 
       <!-- CAMPO 2: VALORES SEPARADOS POR REGIÃO -->
-      <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
 
         <!-- CENTRO - OESTE -->
         <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px; font-size: 11px;">
@@ -376,8 +373,7 @@
 
     </div>
   </div>
-  <!-- ========================================== -->
-
+  
   <script src="script.js"></script>
 </body>
 </html>
