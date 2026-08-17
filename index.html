@@ -1,156 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Orçamento Geral da União - Programa 2319</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Financeiro</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="presentation-wrapper">
+    <header>
+        <h1>Painel Financeiro</h1>
+    </header>
     
-    <!-- DASHBOARD ÚNICO (Sem quebra de página) -->
-    <div class="slide-card">
-      
-      <!-- Cabeçalho Principal Centralizado -->
-      <header class="dashboard-header">
-        <h1>Orçamento Geral da União</h1>
-        <h3>Programa 2319</h3>
-      </header>
-
-      <!-- SEÇÃO 1: EXECUÇÃO ORÇAMENTÁRIA -->
-      <section class="dashboard-section">
-        <h2 class="section-title-padrao">Execução Orçamentária</h2>
-        
-        <!-- Cards Gerais de Resumo -->
-        <div class="cards-row" style="grid-template-columns: repeat(4, 1fr);">
-          <div class="info-card">
-            <h4>Dotação Atualizada</h4>
-            <strong id="limite-total" style="font-size: 1.4rem; color: #0f172a;">R$ 0,00</strong>
-          </div>
-          <div class="info-card">
-            <h4>Empenhado</h4>
-            <strong id="val-empenhado" style="font-size: 1.4rem; color: #0f172a;">R$ 0,00</strong>
-            <small id="pct-empenhado" style="display:block; color: #64748b; font-weight: 600;">0%</small>
-          </div>
-          <div class="info-card card-bloqueado">
-            <h4>Bloqueado</h4>
-            <strong id="val-bloqueado" style="font-size: 1.4rem; color: #0f172a;">R$ 0,00</strong>
-            <small id="pct-bloqueado" style="display:block; color: #64748b; font-weight: 600;">0%</small>
-          </div>
-          <div class="info-card">
-            <h4>Crédito Disponível (Saldo)</h4>
-            <strong id="val-saldo" style="font-size: 1.4rem; color: #0f172a;">R$ 0,00</strong>
-            <small id="pct-saldo" style="display:block; color: #64748b; font-weight: 600;">0%</small>
-          </div>
-        </div>
-
-        <!-- Quadro de Ações Orçamentárias -->
-        <div style="margin-bottom: 24px;">
-          <h3 class="actions-title">Ações Orçamentárias</h3>
-          <ul id="lista-acoes" class="actions-list">
-            <!-- Preenchido dinamicamente via JavaScript -->
-          </ul>
-        </div>
-
-        <!-- Valores Separados por Tipo (com tons pastéis sutis) -->
-         <h3 class="actions-title">Empenhado por RP</h3>
-        <div class="cards-row" style="grid-template-columns: repeat(3, 1fr);">
-          <div class="info-card card-discricionario">
-            <h4>Discricionário <small>(RP 2)</small></h4>
-            <strong id="eof-discricionario" style="font-size: 1.3rem; color: #0f172a;">R$ 0,00</strong>
-          </div>
-          <div class="info-card card-pac">
-            <h4>PAC <small>(RP 3)</small></h4>
-            <strong id="eof-pac" style="font-size: 1.3rem; color: #0f172a;">R$ 0,00</strong>
-          </div>
-          <div class="info-card card-emendas">
-            <h4>Emendas <small>(RP 6, 7, 8 ou 9)</small></h4>
-            <strong id="eof-emendas" style="font-size: 1.3rem; color: #0f172a;">R$ 0,00</strong>
-          </div>
-        </div>
-      </section>
-
-      <div class="divider-section"></div>
-
-      <!-- SEÇÃO 2: EXECUÇÃO FINANCEIRA E PAGAMENTOS -->
-      <section class="dashboard-section">
-        <h2 class="section-title-padrao">Execução Financeira e Pagamentos</h2>
-
-        <div class="flow-card-main">
-          <div class="flow-header-main">
-            <span>PAGAMENTOS EFETUADOS</span>
-            <strong id="pag-acumulado" class="green-text" style="font-size: 2rem;">R$ 0,00</strong>
-          </div>
-
-          <div class="flow-rows-container">
-            <!-- Orçamento Discricionário -->
-            <div class="flow-row-item">
-              <div class="flow-row-header">
-                <span>Orçamento Discricionário</span>
-                <strong id="pag-discricionario">R$ 0,00</strong>
-              </div>
-              <ul class="subgroup-bullets">
-                <li>Restos a Pagar RAP: <strong id="discricionario-rap">R$ 0,00</strong></li>
-                <li>Exercício Corrente: <strong id="discricionario-ex">R$ 0,00</strong></li>
-              </ul>
+    <main>
+        <section class="cards-row" id="dashboard-container">
+            <!-- Cards gerados via JavaScript -->
+            <div class="card card-discricionario">
+                <h3>Discricionário</h3>
+                <p class="valor" id="valor-discricionario">R$ 0,00</p>
             </div>
-
-            <!-- Emendas Parlamentares -->
-            <div class="flow-row-item">
-              <div class="flow-row-header">
-                <span>Emendas Parlamentares</span>
-                <strong id="pag-emendas">R$ 0,00</strong>
-              </div>
-              <ul class="subgroup-bullets">
-                <li>Restos a Pagar RAP: <strong id="emendas-rap">R$ 0,00</strong></li>
-                <li>Exercício Corrente: <strong id="emendas-ex">R$ 0,00</strong></li>
-              </ul>
+            <div class="card card-pac">
+                <h3>PAC</h3>
+                <p class="valor" id="valor-pac">R$ 0,00</p>
             </div>
-
-            <!-- PAC -->
-            <div class="flow-row-item">
-              <div class="flow-row-header">
-                <span>PAC</span>
-                <strong id="pag-pac">R$ 0,00</strong>
-              </div>
-              <ul class="subgroup-bullets">
-                <li>Restos a Pagar RAP: <strong id="pac-rap">R$ 0,00</strong></li>
-                <li>Exercício Corrente: <strong id="pac-ex">R$ 0,00</strong></li>
-              </ul>
+            <div class="card card-emendas">
+                <h3>Emendas</h3>
+                <p class="valor" id="valor-emendas">R$ 0,00</p>
             </div>
-          </div>
-        </div>
-      </section>
+            <div class="card card-bloqueado">
+                <h3>Bloqueado</h3>
+                <p class="valor" id="valor-bloqueado">R$ 0,00</p>
+            </div>
+        </section>
+    </main>
 
-</section> <!-- Fim da seção anterior -->
-
-      <!-- SEÇÃO DE DETALHAMENTO COM POWER BI -->
-      <section class="dashboard-section" style="margin-top: 40px;">
-        <h2 class="section-title-padrao">Detalhamento Gerencial (Power BI)</h2>
-        <div class="powerbi-container">
-          <iframe title="painelgerencial" 
-                  width="100%" 
-                  height="700px" 
-                  src="https://app.fabric.microsoft.com/view?r=eyJrIjoiMzFkYzczZjYtNTQwMC00ODMxLTg5N2UtOGYyZmZiMDNmMTRkIiwidCI6IjFmMWJlODA0LWViZGYtNDJmNC1iZGExLTdmMjlhYmU2ZDQ3YSJ9" 
-                  frameborder="0" 
-                  allowFullScreen="true">
-            </iframe>
-        </div>
-      </section>
-
-      <footer class="slide-footer">
-        <span>2026</span>
-      </footer>
-    </div> <!-- Fecha .slide-card (Linha 128) -->
-  </div> <!-- Fecha .presentation-wrapper (Linha 130) -->
-
-      <footer class="slide-footer">
-      </footer>
-    </div>
-
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
