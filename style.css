@@ -1,254 +1,55 @@
 :root {
-  --bg-app: #f1f5f9;
-  --card-bg: #ffffff;
-  --text-main: #0f172a;
-  --text-muted: #64748b;
-  --border-color: #e2e8f0;
-  
-  --green-bg: #ecfdf5;
-  --green-border: #a7f3d0;
-  --green-text: #047857;
-
-  --orange-bg: #fffbeb;
-  --orange-border: #fde68a;
-  --orange-text: #b45309;
-
-  --blue-bg: #eff6ff;
-  --blue-border: #bfdbfe;
-  --blue-text: #1d4ed8;
-
-  --red-text: #b91c1c;
-  --red-bg: #fef2f2;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    /* Paleta de Cores */
+    --bg-app: #f1f5f9;
+    --text-main: #0f172a;
+    --card-bg: #ffffff;
+    
+    /* Variáveis de Cores de Cards */
+    --color-blue: #90caf9; --border-blue: #2196f3;
+    --color-green: #a5d6a7; --border-green: #4caf50;
+    --color-amber: #ffe082; --border-amber: #ffc107;
+    --color-red: #ef9a9a; --border-red: #f44336;
+    
+    /* Spacing */
+    --spacing: 16px;
+    --radius: 8px;
 }
 
 body {
-  font-family: 'Inter', -apple-system, sans-serif;
-  background-color: var(--bg-app);
-  color: var(--text-main);
-  padding: 30px 20px;
-  display: flex;
-  justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-app);
+    color: var(--text-main);
+    margin: 0;
+    padding: 2rem;
 }
 
-.presentation-wrapper {
-  width: 100%;
-  max-width: 1280px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-/* SLIDE CARD ÚNICO (Expandido) */
-.slide-card {
-  background: var(--card-bg);
-  border-radius: 20px;
-  border: 1px solid var(--border-color);
-  padding: 36px 40px;
-  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;          /* Ocupa a largura disponível */
-  max-width: 1300px;    /* Aumente este valor (ex: 1300px ou 1400px) para alargar o cartão */
-  margin: 0 auto;       /* Mantém centralizado na tela */
-}
-
-/* HEADER CENTRALIZADO */
-.dashboard-header {
-  text-align: center;
-  margin: 0 auto 30px auto;
-  width: 100%;
-}
-
-.dashboard-header h1 {
-  font-size: 1.8rem;
-  font-weight: 800;
-  color: var(--text-main);
-  letter-spacing: -0.02em;
-  margin-bottom: 4px;
-}
-
-.dashboard-header h2 {
-  font-size: 1.1rem;
-  color: var(--text-muted);
-  font-weight: 500;
-}
-
-/* TÍTULOS PADRONIZADOS PARA AS SEÇÕES */
-.section-title-padrao {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: #0f172a;
-  letter-spacing: -0.02em;
-  margin-bottom: 20px;
-}
-
-.divider-section {
-  border-top: 2px solid #f1f5f9;
-  margin: 36px 0;
-}
-
-/* ACTIONS LIST */
-.actions-title {
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: #475569;
-  margin-bottom: 10px;
-}
-
-.actions-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.actions-list li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #f8fafc;
-  border: 1px solid #edf2f7;
-  padding: 10px 14px;
-  border-radius: 10px;
-  font-size: 0.88rem;
-}
-
-.action-name {
-  color: #334155;
-  font-weight: 500;
-  flex: 1;
-}
-
-.action-value {
-  font-weight: 700;
-  color: #0f172a;
-  margin: 0 12px;
-}
-
-/* CARDS ROW E CORES PASTÉIS SUTIS */
+/* Grid Responsivo */
 .cards-row {
-  display: grid;
-  gap: 16px;
-  margin-bottom: 20px;
+    display: grid;
+    gap: var(--spacing);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 2rem;
 }
 
-.info-card {
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 14px;
-  background: #ffffff;
+/* Estilo Base do Card */
+.card {
+    background: var(--card-bg);
+    padding: var(--spacing);
+    border-radius: var(--radius);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-left: 5px solid #ccc;
+    transition: transform 0.2s;
 }
 
-.card-discricionario {
-  border-left: 4px solid #90caf9;
-  background-color: #f4f8fb;
+.card:hover {
+    transform: translateY(-5px);
 }
 
-.card-pac {
-  border-left: 4px solid #a5d6a7;
-  background-color: #f4f9f4;
-}
+.card h3 { margin-top: 0; font-size: 0.9rem; opacity: 0.8; }
+.card .valor { font-size: 1.5rem; font-weight: bold; margin-bottom: 0; }
 
-.card-emendas {
-  border-left: 4px solid #ffe082;
-  background-color: #fdfef4;
-}
-
-.card-bloqueado {
-  border-left: 4px solid #ef9a9a;
-  background-color: #fbf4f4;
-}
-
-.info-card h4 {
-  font-size: 0.82rem;
-  color: #475569;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-/* LAYOUT EMPILHADO DA EXECUÇÃO FINANCEIRA */
-.flow-card-main {
-  background: #ffffff;
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.flow-header-main {
-  border-bottom: 1px solid #e2e8f0;
-  padding-bottom: 16px;
-}
-
-.flow-header-main span {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: #64748b;
-  letter-spacing: 0.03em;
-  display: block;
-  margin-bottom: 4px;
-}
-
-.flow-rows-container {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.flow-row-item {
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 16px 20px;
-  background: #ffffff;
-}
-
-.flow-row-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #0f172a;
-}
-
-/* LISTA VERTICAL (LINHAS SEPARADAS) */
-.subgroup-bullets {
-  list-style-type: disc;
-  padding-left: 18px;
-  margin-top: 10px;
-  font-size: 0.83rem;
-  color: #64748b;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.subgroup-bullets li strong {
-  color: #0f172a;
-  font-weight: 600;
-}
-
-.green-text { color: var(--green-text); }
-.red-text { color: var(--red-text); }
-
-/* FOOTER */
-.slide-footer {
-  display: flex;
-  justify-content: space-between;
-  border-top: 1px solid #f1f5f9;
-  padding-top: 16px;
-  margin-top: 36px;
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: #94a3b8;
-  letter-spacing: 0.05em;
-}
+/* Aplicação das Cores via Variáveis */
+.card-discricionario { border-color: var(--border-blue); background-color: var(--color-blue); }
+.card-pac { border-color: var(--border-green); background-color: var(--color-green); }
+.card-emendas { border-color: var(--border-amber); background-color: var(--color-amber); }
+.card-bloqueado { border-color: var(--border-red); background-color: var(--color-red); }
