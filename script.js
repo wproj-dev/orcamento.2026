@@ -136,27 +136,50 @@ function processarExecucaoOrcametaria(dados) {
     document.getElementById('pct-bloqueado').textContent = `${((bloqueadoTotal / limiteTotal) * 100).toFixed(2)}%`;
   }
 
-  const ulAcoes = document.getElementById('lista-acoes');
-  if (ulAcoes) {
-    ulAcoes.innerHTML = '';
+  // Renderização em Tabela Detalhada das Ações Orçamentárias
+  const dropdownContent = document.querySelector('.actions-dropdown-content');
+  if (dropdownContent) {
     const acoesArray = Object.values(mapaAcoes);
+    
+    let htmlTabela = `
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: left;">
+          <thead>
+            <tr style="border-bottom: 2px solid #e2e8f0; color: #475569;">
+              <th style="padding: 10px;">Ação</th>
+              <th style="padding: 10px; text-align: right;">Dotação</th>
+              <th style="padding: 10px; text-align: right;">Crédito Disp.</th>
+              <th style="padding: 10px; text-align: right;">Empenhado</th>
+              <th style="padding: 10px; text-align: right;">Bloqueado</th>
+            </tr>
+          </thead>
+          <tbody>
+    `;
+
     if (acoesArray.length > 0) {
-      acoesArray.forEach(acao => {
-        const li = document.createElement('li');
-        li.innerHTML = `
-          <span class="action-name">${acao.nome}</span>
-          <div class="action-details-grid">
-            <span>Dotação: <strong>${formatarMoeda(acao.dotacao)}</strong></span>
-            <span>Crédito Disp.: <strong>${formatarMoeda(acao.saldo)}</strong></span>
-            <span>Empenhado: <strong>${formatarMoeda(acao.empenhado)}</strong></span>
-            <span>Bloqueado: <strong>${formatarMoeda(acao.bloqueado)}</strong></span>
-          </div>
+      acoesArray.forEach((acao, index) => {
+        const bgRow = index % 2 === 0 ? '#ffffff' : '#f8fafc';
+        htmlTabela += `
+          <tr style="background-color: ${bgRow}; border-bottom: 1px solid #edf2f7;">
+            <td style="padding: 10px; font-weight: 700; color: #0f172a;">${acao.nome}</td>
+            <td style="padding: 10px; text-align: right;">${formatarMoeda(acao.dotacao)}</td>
+            <td style="padding: 10px; text-align: right;">${formatarMoeda(acao.saldo)}</td>
+            <td style="padding: 10px; text-align: right;">${formatarMoeda(acao.empenhado)}</td>
+            <td style="padding: 10px; text-align: right;">${formatarMoeda(acao.bloqueado)}</td>
+          </tr>
         `;
-        ulAcoes.appendChild(li);
       });
     } else {
-      ulAcoes.innerHTML = `<li><span class="action-name">Nenhuma ação encontrada</span></li>`;
+      htmlTabela += `<tr><td colspan="5" style="padding: 15px; text-align: center; color: #64748b;">Nenhuma ação encontrada</td></tr>`;
     }
+
+    htmlTabela += `
+          </tbody>
+        </table>
+      </div>
+    `;
+
+    dropdownContent.innerHTML = htmlTabela;
   }
 
   document.getElementById('eof-discricionario').textContent = formatarMoeda(eofDiscricionario);
@@ -233,7 +256,7 @@ function processarExecucaoFinanceira(dados) {
         discricionarioTotal += somaLinha;
         discricionarioRap += valRap;
         discricionarioEx += valExercicio;
-        totalAcumulado += somaLinhead; // note: mantido o acumulado corrigido
+        totalAcumulado += somaLinha; // Corrigido de somaLinhead para somaLinha
       } else if (eofVal === 3) {
         pacTotal += somaLinha;
         pacRap += valRap;
