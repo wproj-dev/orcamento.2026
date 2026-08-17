@@ -193,18 +193,24 @@
 
       <div class="divider-section"></div>
 
-      <!-- SEÇÃO DE DETALHAMENTO COM POWER BI -->
+      <!-- SEÇÃO DE DETALHAMENTO COM POWER BI (MENU SUSPENSO) -->
       <section class="dashboard-section" style="margin-top: 40px;">
-        <h2 class="section-title-padrao">Detalhamento Gerencial (Power BI)</h2>
-        <div class="powerbi-container">
-          <iframe title="painelgerencial" 
-                  src="https://app.fabric.microsoft.com/view?r=eyJrIjoiMzFkYzczZjYtNTQwMC00ODMxLTg5N2UtOGYyZmZiMDNmMTRkIiwidCI6IjFmMWJlODA0LWViZGYtNDJmNC1iZGExLTdmMjlhYmU2ZDQ3YSJ9" 
-                  width="100%" 
-                  height="600px" 
-                  frameborder="0" 
-                  allowFullScreen="true">
-          </iframe>
-        </div>
+        <details class="actions-dropdown-container">
+          <summary class="actions-dropdown-summary">
+            <h2 class="section-title-padrao" style="display:inline; margin:0;">Detalhamento Gerencial (Power BI) (Clique para expandir/ocultar)</h2>
+          </summary>
+          <div class="actions-dropdown-content" style="margin-top: 16px;">
+            <div class="powerbi-container">
+              <iframe title="painelgerencial" 
+                      src="https://app.fabric.microsoft.com/view?r=eyJrIjoiMzFkYzczZjYtNTQwMC00ODMxLTg5N2UtOGYyZmZiMDNmMTRkIiwidCI6IjFmMWJlODA0LWViZGYtNDJmNC1iZGExLTdmMjlhYmU2ZDQ3YSJ9" 
+                      width="100%" 
+                      height="600px" 
+                      frameborder="0" 
+                      allowFullScreen="true">
+              </iframe>
+            </div>
+          </div>
+        </details>
       </section>
 
       <footer class="slide-footer">
