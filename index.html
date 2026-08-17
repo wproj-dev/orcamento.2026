@@ -228,151 +228,115 @@
         Execução orçamentária do FGTS em 2026
       </h1>
 
-      <!-- CAMPO 1: VISÃO CONSOLIDADA NACIONAL -->
-      <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 24px; margin-bottom: 30px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
-          <div>
-            <h2 style="font-size: 18px; font-weight: 700; color: #1e293b; margin: 0 0 4px 0;">Execução do Orçamento FGTS 2026</h2>
-            <span style="font-size: 12px; color: #64748b;">Visão consolidada nacional · IN nº 47/2026 · Todas as regiões</span>
-          </div>
-          <div style="text-align: right;">
-            <span style="font-size: 28px; font-weight: 800; color: #2563eb;">45.8%</span>
-            <div style="font-size: 11px; font-weight: 600; color: #64748b; text-transform: uppercase;">Do Limite Executado</div>
-          </div>
+    <!-- BRASIL -->
+    <div class="card brasil">
+        <div class="header">BRASIL (Total)</div>
+        <div class="stats-priority">
+            <div class="stat-box"><div class="stat-label">Limite</div><div class="stat-value">6,40 bi</div></div>
+            <div class="stat-box" style="background:#dcfce7;"><div class="stat-label">Executado</div><div class="stat-value">2,93 bi</div></div>
+            <div class="stat-box" style="background:#fee2e2;"><div class="stat-label">Saldo</div><div class="stat-value">3,46 bi</div></div>
         </div>
-
-        <!-- Barra de Progresso -->
-        <div style="background: #e2e8f0; height: 24px; border-radius: 6px; overflow: hidden; display: flex; margin-bottom: 20px;">
-          <div style="width: 45.8%; background: #2563eb; display: flex; align-items: center; justify-content: center; color: white; font-size: 11px; font-weight: 600;">45.8% exec.</div>
-          <div style="width: 54.2%; background: #fef08a; display: flex; align-items: center; justify-content: center; color: #854d0e; font-size: 11px; font-weight: 600;">54.2% demanda</div>
+        <div class="details-grid">
+            <div class="detail-item"><span class="detail-label">A Contratar Avançar</span><span class="detail-value">1,95 bi</span></div>
+            <div class="detail-item"><span class="detail-label">A Contratar GM</span><span class="detail-value">1,73 bi</span></div>
+            <div class="detail-item"><span class="detail-label">A Contratar GM Priv.</span><span class="detail-value">1,42 bi</span></div>
+            <div class="detail-item"><span class="detail-label">A Contratar Refr. Priv.</span><span class="detail-value">1,99 bi</span></div>
+            <div class="detail-item"><span class="detail-label">Contratado Avançar</span><span class="detail-value">210,98 mi</span></div>
+            <div class="detail-item"><span class="detail-label">Contratado GM</span><span class="detail-value">411,66 mi</span></div>
+            <div class="detail-item"><span class="detail-label">Contratado Refr. Priv.</span><span class="detail-value">2,16 bi</span></div>
+            <div class="detail-item"><span class="detail-label">Contratado Refr. Púb.</span><span class="detail-value">142,91 mi</span></div>
+            <div class="detail-item"><span class="detail-label">Sel. Pub. Avançar</span><span class="detail-value">821,37 mi</span></div>
+            <div class="detail-item"><span class="detail-label">Sel. Pub. GM Priv.</span><span class="detail-value">1,36 bi</span></div>
+            <div class="detail-item"><span class="detail-label">Sel. Pub. Refr. Priv.</span><span class="detail-value">76,73 mi</span></div>
         </div>
-
-        <!-- Cards de Destaque Superior (Limite, Executado, Saldo) -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 16px;">
-          <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 16px; text-align: center;">
-            <div style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; margin-bottom: 6px;">Limite 2026 (Col. C)</div>
-            <div style="font-size: 22px; font-weight: 800; color: #0f172a;">R$ 6,40 bi</div>
-          </div>
-          <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; text-align: center;">
-            <div style="font-size: 11px; font-weight: 700; color: #1d4ed8; text-transform: uppercase; margin-bottom: 6px;">Valor Executado (Col. N)</div>
-            <div style="font-size: 22px; font-weight: 800; color: #1d4ed8;">R$ 2,930 bi</div>
-          </div>
-          <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 16px; text-align: center;">
-            <div style="font-size: 11px; font-weight: 700; color: #15803d; text-transform: uppercase; margin-bottom: 6px;">Saldo (Col. O)</div>
-            <div style="font-size: 22px; font-weight: 800; color: #15803d;">R$ 3,470 bi</div>
-          </div>
-        </div>
-
-        <!-- Totais Menores (Colunas C à M) -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; padding-top: 12px; border-top: 1px dashed #e2e8f0; font-size: 12px; color: #475569; text-align: center;">
-          <div style="background: #f8fafc; padding: 8px; border-radius: 6px;"><strong>A Contratar:</strong> R$ 4,185 bi</div>
-          <div style="background: #f8fafc; padding: 8px; border-radius: 6px;"><strong>Seleção a Publicar:</strong> R$ 816,04M</div>
-          <div style="background: #f8fafc; padding: 8px; border-radius: 6px;"><strong>Demanda Total:</strong> R$ 5,001 bi</div>
-          <div style="background: #f8fafc; padding: 8px; border-radius: 6px;"><strong>Demais Colunas (C-M):</strong> -</div>
-        </div>
-      </div>
-
-      <!-- TÍTULO SEÇÃO 2 -->
-      <div style="font-size: 13px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; border-bottom: 1px solid #e2e8f0; padding-bottom: 6px;">
-        Posição Orçamentária por Região — Exercício 2026
-      </div>
-
-      <!-- CAMPO 2: VALORES SEPARADOS POR REGIÃO -->
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
-
-        <!-- CENTRO - OESTE -->
-        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px; font-size: 11px;">
-          <div style="font-weight: 700; color: #0f172a; margin-bottom: 8px; text-transform: uppercase;">Centro - Oeste</div>
-          <div style="font-size: 20px; font-weight: 800; color: #2563eb; margin-bottom: 2px;">45.0%</div>
-          <div style="color: #64748b; margin-bottom: 10px;">executado</div>
-          <div style="color: #15803d; font-weight: 600; margin-bottom: 12px;">160.4% comprometido</div>
-          <div style="border-top: 1px solid #f1f5f9; padding-top: 8px;">
-            <div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748b;">Limite 2026</span><span style="font-weight: 600;">R$ 558,46M</span></div>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748b;">Executado</span><span style="font-weight: 600; color: #2563eb;">R$ 251,59M</span></div>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748b;">Saldo oficial</span><span style="font-weight: 600;">R$ 306,88M</span></div>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748b;">A Contratar</span><span style="font-weight: 600;">R$ 80,56M</span></div>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748b;">Seleção Pub.</span><span style="font-weight: 600;">R$ 411,73M</span></div>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;"><span style="color: #64748b;">Saldo futuro</span><span style="font-weight: 600; color: #dc2626;">R$ -185,41M</span></div>
-          </div>
-          <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 4px; padding: 4px 8px; text-align: center; color: #b91c1c; font-weight: 600; font-size: 10px;">
-            ⚠ Déficit: R$ 185,41M
-          </div>
-        </div>
-
-        <!-- NORDESTE -->
-        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px; font-size: 11px;">
-          <div style="font-weight: 700; color: #0f172a; margin-bottom: 8px; text-transform: uppercase;">Nordeste</div>
-          <div style="font-size: 20px; font-weight: 800; color: #2563eb; margin-bottom: 2px;">14.7%</div>
-          <div style="color: #64748b; margin-bottom: 10px;">executado</div>
-          <div style="color: #15803d; font-weight: 600; margin-bottom: 12px;">8.7% comprometido</div>
-          <div style="border-top: 1px solid #f1f5f9; padding-top: 8px;">
-            <div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748b;">Limite 2026</span><span style="font-weight: 600;">R$ 1,510 bi</span></div>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748b;">Executado</span><span style="font-weight: 600; color: #2563eb;">R$ 222,17M</span></div>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748b;">Saldo oficial</span><span style="font-weight: 600;">R$ 1,288 bi</span></div>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748b;">A Contratar</span><span style="font-weight: 600;">R$ 112,32M</span></div>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748b;">Seleção Pub.</span><span style="font-weight: 600;">R$ 0,00M</span></div>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;"><span style="color: #64748b;">Saldo futuro</span><span style="font-weight: 600; color: #16a34a;">R$ 1,176 bi</span></div>
-          </div>
-        </div>
-
-        <!-- NORTE -->
-        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px; font-size: 11px;">
-          <div style="font-weight: 700; color: #0f172a; margin-bottom: 8px; text-transform: uppercase;">Norte</div>
-          <div style="font-size: 20px; font-weight: 800; color: #2563eb; margin-bottom: 2px;">14.7%</div>
-          <div style="color: #64748b; margin-bottom: 10px;">executado</div>
-          <div style="color: #15803d; font-weight: 600; margin-bottom: 12px;">4.8% comprometido</div>
-          <div style="border-top: 1px solid #f1f5f9; padding-top: 8px;">
-            <div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748b;">Limite 2026</span><span style="font-weight: 600;">R$ 456,97M</span></div>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748b;">Executado</span><span style="font-weight: 600; color: #2563eb;">R$ 67,00M</span></div>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748b;">Saldo oficial</span><span style="font-weight: 600;">R$ 389,97M</span></div>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748b;">A Contratar</span><span style="font-weight: 600;">R$ 18,77M</span></div>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748b;">Seleção Pub.</span><span style="font-weight: 600;">R$ 0,00M</span></div>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;"><span style="color: #64748b;">Saldo futuro</span><span style="font-weight: 600; color: #16a34a;">R$ 371,21M</span></div>
-          </div>
-        </div>
-
-        <!-- SUDESTE -->
-        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px; font-size: 11px;">
-          <div style="font-weight: 700; color: #0f172a; margin-bottom: 8px; text-transform: uppercase;">Sudeste</div>
-          <div style="font-size: 20px; font-weight: 800; color: #2563eb; margin-bottom: 2px;">70.0%</div>
-          <div style="color: #64748b; margin-bottom: 10px;">executado</div>
-          <div style="color: #b91c1c; font-weight: 600; margin-bottom: 12px;">398.8% comprometido</div>
-          <div style="border-top: 1px solid #f1f5f9; padding-top: 8px;">
-            <div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748b;">Limite 2026</span><span style="font-weight: 600;">R$ 2,983 bi</span></div>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748b;">Executado</span><span style="font-weight: 600; color: #2563eb;">R$ 2,089 bi</span></div>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748b;">Saldo oficial</span><span style="font-weight: 600;">R$ 893,82M</span></div>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748b;">A Contratar</span><span style="font-weight: 600; color: #d97706;">R$ 3,511 bi</span></div>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748b;">Seleção Pub.</span><span style="font-weight: 600;">R$ 54,14M</span></div>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;"><span style="color: #64748b;">Saldo futuro</span><span style="font-weight: 600; color: #dc2626;">R$ -2,671 bi</span></div>
-          </div>
-          <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 4px; padding: 4px 8px; text-align: center; color: #b91c1c; font-weight: 600; font-size: 10px;">
-            ⚠ Déficit: R$ 2,671 bi
-          </div>
-        </div>
-
-        <!-- SUL -->
-        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px; font-size: 11px;">
-          <div style="font-weight: 700; color: #0f172a; margin-bottom: 8px; text-transform: uppercase;">Sul</div>
-          <div style="font-size: 20px; font-weight: 800; color: #2563eb; margin-bottom: 2px;">33.7%</div>
-          <div style="color: #64748b; margin-bottom: 10px;">executado</div>
-          <div style="color: #b91c1c; font-weight: 600; margin-bottom: 12px;">137.6% comprometido</div>
-          <div style="border-top: 1px solid #f1f5f9; padding-top: 8px;">
-            <div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748b;">Limite 2026</span><span style="font-weight: 600;">R$ 891,81M</span></div>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748b;">Executado</span><span style="font-weight: 600; color: #2563eb;">R$ 300,54M</span></div>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748b;">Saldo oficial</span><span style="font-weight: 600;">R$ 591,28M</span></div>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748b;">A Contratar</span><span style="font-weight: 600; color: #d97706;">R$ 463,26M</span></div>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748b;">Seleção Pub.</span><span style="font-weight: 600;">R$ 350,17M</span></div>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;"><span style="color: #64748b;">Saldo futuro</span><span style="font-weight: 600; color: #dc2626;">R$ -222,16M</span></div>
-          </div>
-          <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 4px; padding: 4px 8px; text-align: center; color: #b91c1c; font-weight: 600; font-size: 10px;">
-            ⚠ Déficit: R$ 222,16M
-          </div>
-        </div>
-
-      </div>
-
     </div>
-  </div>
+
+    <!-- CENTRO-OESTE -->
+    <div class="card">
+        <div class="header">CENTRO-OESTE</div>
+        <div class="stats-priority">
+            <div class="stat-box"><div class="stat-label">Limite</div><div class="stat-value">558,46 mi</div></div>
+            <div class="stat-box"><div class="stat-label">Executado</div><div class="stat-value">251,58 mi</div></div>
+            <div class="stat-box"><div class="stat-label">Saldo</div><div class="stat-value">306,87 mi</div></div>
+        </div>
+        <div class="details-grid">
+            <div class="detail-item"><span class="detail-label">A Contratar Refrota Priv.</span><span class="detail-value">167,97 mi</span></div>
+            <div class="detail-item"><span class="detail-label">Contratado Avançar</span><span class="detail-value">136,09 mi</span></div>
+            <div class="detail-item"><span class="detail-label">Contratado Refrota Priv.</span><span class="detail-value">115,48 mi</span></div>
+            <div class="detail-item"><span class="detail-label">Sel. Publicar Avançar</span><span class="detail-value">411,73 mi</span></div>
+        </div>
+    </div>
+
+    <!-- NORDESTE -->
+    <div class="card">
+        <div class="header">NORDESTE</div>
+        <div class="stats-priority">
+            <div class="stat-box"><div class="stat-label">Limite</div><div class="stat-value">1,51 bi</div></div>
+            <div class="stat-box"><div class="stat-label">Executado</div><div class="stat-value">222,17 mi</div></div>
+            <div class="stat-box"><div class="stat-label">Saldo</div><div class="stat-value">1,28 bi</div></div>
+        </div>
+        <div class="details-grid">
+            <div class="detail-item"><span class="detail-label">A Contratar Refrota Priv.</span><span class="detail-value">247,65 mi</span></div>
+            <div class="detail-item"><span class="detail-label">Contratado Refrota Priv.</span><span class="detail-value">222,17 mi</span></div>
+        </div>
+    </div>
+
+    <!-- NORTE -->
+    <div class="card">
+        <div class="header">NORTE</div>
+        <div class="stats-priority">
+            <div class="stat-box"><div class="stat-label">Limite</div><div class="stat-value">456,97 mi</div></div>
+            <div class="stat-box"><div class="stat-label">Executado</div><div class="stat-value">67,00 mi</div></div>
+            <div class="stat-box"><div class="stat-label">Saldo</div><div class="stat-value">389,97 mi</div></div>
+        </div>
+        <div class="details-grid">
+            <div class="detail-item"><span class="detail-label">A Contratar Refrota Priv.</span><span class="detail-value">123,46 mi</span></div>
+            <div class="detail-item"><span class="detail-label">Contratado Refrota Priv.</span><span class="detail-value">67,00 mi</span></div>
+        </div>
+    </div>
+
+    <!-- SUDESTE -->
+    <div class="card">
+        <div class="header">SUDESTE</div>
+        <div class="stats-priority">
+            <div class="stat-box"><div class="stat-label">Limite</div><div class="stat-value">2,98 bi</div></div>
+            <div class="stat-box"><div class="stat-label">Executado</div><div class="stat-value">2,08 bi</div></div>
+            <div class="stat-box"><div class="stat-label">Saldo</div><div class="stat-value">893,82 mi</div></div>
+        </div>
+        <div class="details-grid">
+            <div class="detail-item"><span class="detail-label">A Contr. Avançar</span><span class="detail-value">1,92 bi</span></div>
+            <div class="detail-item"><span class="detail-label">A Contr. GM</span><span class="detail-value">1,73 bi</span></div>
+            <div class="detail-item"><span class="detail-label">A Contr. GM Priv.</span><span class="detail-value">1,42 bi</span></div>
+            <div class="detail-item"><span class="detail-label">A Contr. Refr. Priv.</span><span class="detail-value">1,05 bi</span></div>
+            <div class="detail-item"><span class="detail-label">Contr. Avançar</span><span class="detail-value">33,50 mi</span></div>
+            <div class="detail-item"><span class="detail-label">Contr. GM</span><span class="detail-value">411,66 mi</span></div>
+            <div class="detail-item"><span class="detail-label">Contr. Refr. Priv.</span><span class="detail-value">1,58 bi</span></div>
+            <div class="detail-item"><span class="detail-label">Contr. Refr. Púb.</span><span class="detail-value">60,31 mi</span></div>
+            <div class="detail-item"><span class="detail-label">Sel. Pub. Avançar</span><span class="detail-value">131,82 mi</span></div>
+            <div class="detail-item"><span class="detail-label">Sel. Pub. GM Priv.</span><span class="detail-value">1,36 bi</span></div>
+            <div class="detail-item"><span class="detail-label">Sel. Pub. Refr. Priv.</span><span class="detail-value">19,38 mi</span></div>
+        </div>
+    </div>
+
+    <!-- SUL -->
+    <div class="card">
+        <div class="header">SUL</div>
+        <div class="stats-priority">
+            <div class="stat-box"><div class="stat-label">Limite</div><div class="stat-value">891,81 mi</div></div>
+            <div class="stat-box"><div class="stat-label">Executado</div><div class="stat-value">277,82 mi</div></div>
+            <div class="stat-box"><div class="stat-label">Saldo</div><div class="stat-value">590,47 mi</div></div>
+        </div>
+        <div class="details-grid">
+            <div class="detail-item"><span class="detail-label">A Contratar Avançar</span><span class="detail-value">30,88 mi</span></div>
+            <div class="detail-item"><span class="detail-label">A Contratar Refrota Priv.</span><span class="detail-value">401,33 mi</span></div>
+            <div class="detail-item"><span class="detail-label">Contratado Avançar</span><span class="detail-value">41,38 mi</span></div>
+            <div class="detail-item"><span class="detail-label">Contratado GM</span><span class="detail-value">244,35 mi</span></div>
+            <div class="detail-item"><span class="detail-label">Contratado Refrota Púb.</span><span class="detail-value">15,60 mi</span></div>
+            <div class="detail-item"><span class="detail-label">Sel. Pub. Refr. Priv.</span><span class="detail-value">57,35 mi</span></div>
+        </div>
+    </div>
+
+</div>
   
   <script src="script.js"></script>
 </body>
