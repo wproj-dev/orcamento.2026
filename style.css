@@ -54,6 +54,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;          /* Ocupa a largura disponível */
+  max-width: 1300px;    /* Aumente este valor (ex: 1300px ou 1400px) para alargar o cartão */
+  margin: 0 auto;       /* Mantém centralizado na tela */
 }
 
 /* HEADER CENTRALIZADO */
